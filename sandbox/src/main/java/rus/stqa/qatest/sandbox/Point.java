@@ -15,6 +15,6 @@ public class Point {
         double distanceY2 = Math.pow(distanceY, 2);
         double sum = distanceX2 + distanceY2;
         double l = Math.sqrt(sum);
-        System.out.println("Расстояние между точками Point1(" + x + ";" + y + ") и p2(" + point2.x + ";" + point2.y + ") = " + l);
+        System.out.println("Расстояние между точками Point1(" + x + ";" + y + ") и Point2(" + point2.x + ";" + point2.y + ") = " + l);
     }
 }
