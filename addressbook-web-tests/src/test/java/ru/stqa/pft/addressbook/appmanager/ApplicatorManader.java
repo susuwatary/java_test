@@ -10,10 +10,11 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by alena on 04.10.16.
  */
-public class ApplicatorManader extends NavigationsHelper {
+public class ApplicatorManader {
     FirefoxDriver wd;
 
 
+    private NavigationsHelper navigationsHelper;
     private GroupHelper groupHelper;
 
     public static boolean isAlertPresent(FirefoxDriver wd) {
@@ -29,6 +30,7 @@ public class ApplicatorManader extends NavigationsHelper {
         wd = new FirefoxDriver();
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         groupHelper = new GroupHelper(wd);
+        navigationsHelper = new NavigationsHelper(wd);
         login("admin", "secret");
     }
 
@@ -44,10 +46,6 @@ public class ApplicatorManader extends NavigationsHelper {
         wd.findElement(By.name("pass")).clear();
         wd.findElement(By.name("pass")).sendKeys(password);
         wd.findElement(By.xpath("//form[@id='LoginForm']/input[3]")).click();
-    }
-
-    public void gotoGroupPage() {
-        wd.findElement(By.name("new")).click();
     }
 
     public void fillcontact(GroupContsct groupContsct) {
@@ -87,5 +85,9 @@ public class ApplicatorManader extends NavigationsHelper {
 
     public GroupHelper getGroupHelper() {
         return groupHelper;
+    }
+
+    public NavigationsHelper getNavigationsHelper() {
+        return navigationsHelper;
     }
 }
