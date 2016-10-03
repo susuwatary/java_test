@@ -11,9 +11,9 @@ public class GroupDelitonTest extends TestBase {
     public void GroupDelitonTest() {
 
         app.gotoPageGroupe();
-        app.SelectGroup();
-        app.delitaSelectGroup();
-        app.returnGroupPaga();    }
+        app.getGroupHelper().SelectGroup();
+        app.getGroupHelper().delitaSelectGroup();
+        app.getGroupHelper().returnGroupPaga();    }
 
 
 }
