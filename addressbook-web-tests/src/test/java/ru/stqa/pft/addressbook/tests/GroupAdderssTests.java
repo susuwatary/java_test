@@ -13,8 +13,8 @@ public class GroupAdderssTests extends TestBase {
     public void GroupAdderssTests() {
 
         app.gotoAdders();
-        app.fillcontact(new GroupContsct("Alena", "Kob", "this address", "+71111111111", "exempl@dor.com"));
-        app.returnToAddres();
+        app.getAdderessHelper().fillcontact(new GroupContsct("Alena", "Kob", "this address", "+71111111111", "exempl@dor.com"));
+        app.getAdderessHelper().returnToAddres();
     }
 
    
