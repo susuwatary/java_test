@@ -60,4 +60,7 @@ public class ApplicatorManader {
     public AdderessHelper getAdderessHelper() {
         return adderessHelper;
     }
+
+
+
 }
