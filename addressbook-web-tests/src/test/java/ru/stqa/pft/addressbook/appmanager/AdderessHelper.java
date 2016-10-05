@@ -1,6 +1,7 @@
 package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.stqa.pft.addressbook.GroupContsct;
 
@@ -9,7 +10,7 @@ import ru.stqa.pft.addressbook.GroupContsct;
  */
 public class AdderessHelper extends HelperBase {
 
-    public AdderessHelper(FirefoxDriver wd) {
+    public AdderessHelper(WebDriver wd) {
         super(wd);
     }
 

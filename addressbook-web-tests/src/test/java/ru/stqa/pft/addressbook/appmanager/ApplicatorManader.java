@@ -2,7 +2,11 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.BrowserType;
 import ru.stqa.pft.addressbook.tests.SessionHelper;
 
 import java.util.concurrent.TimeUnit;
@@ -11,11 +15,16 @@ import java.util.concurrent.TimeUnit;
  * Created by alena on 04.10.16.
  */
 public class ApplicatorManader {
-    FirefoxDriver wd;
+    WebDriver wd;
     private AdderessHelper adderessHelper;
     private SessionHelper sessionHelper;
     private NavigationsHelper navigationsHelper;
     private GroupHelper groupHelper;
+    private String browser;
+
+    public ApplicatorManader(String browser) {
+        this.browser = browser;
+    }
 
     public static boolean isAlertPresent(FirefoxDriver wd) {
         try {
@@ -27,6 +36,14 @@ public class ApplicatorManader {
     }
 
     public void init() {
+        if (browser == BrowserType.FIREFOX) {
+            wd = new FirefoxDriver();
+        } else  if (browser == BrowserType.CHROME) {
+            wd = new ChromeDriver();
+        } else  if (browser == BrowserType.IE) {
+            wd = new InternetExplorerDriver();
+        }
+
         wd = new FirefoxDriver();
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         groupHelper = new GroupHelper(wd);
