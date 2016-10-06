@@ -25,14 +25,16 @@ public class GroupHelper extends HelperBase {
 
     public void fillGroupForm(GroupData groupData) {
         type(By.name("group_name"), groupData.getName());
-        type(By.name("group_header"), groupData.getName());
-        type(By.name("group_footer"), groupData.getName());
+        type(By.name("group_header"), groupData.getHeader());
+        type(By.name("group_footer"), groupData.getFooter());
         click(By.name("submit"));
+
     }
 
     public void initGroupCreation() {
         click(By.name("group_name"));
     }
+
 
     public void delitaSelectGroup() {
         click(By.name("delete"));
