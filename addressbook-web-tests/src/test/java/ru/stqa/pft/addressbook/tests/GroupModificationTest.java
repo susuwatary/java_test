@@ -6,7 +6,7 @@ import ru.stqa.pft.addressbook.GroupData;
 /**
  * Created by alena on 04.10.16.
  */
-public class GroupModifikationsTest extends TestBase {
+public class GroupModificationTest extends TestBase {
     @Test
 
     public void testGroupModifications() {

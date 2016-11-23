@@ -2,8 +2,7 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import ru.stqa.pft.addressbook.GroupContsct;
+import ru.stqa.pft.addressbook.ContactData;
 
 /**
  * Created by alena on 04.10.16.
@@ -14,7 +13,7 @@ public class AdderessHelper extends HelperBase {
         super(wd);
     }
 
-    public void fillcontact(GroupContsct groupContsct) {
+    public void fillcontact(ContactData groupContsct) {
         type(By.name("firstname"),groupContsct.getName());
         type(By.name("lastname"),groupContsct.getLastname());
         type(By.name("address"),groupContsct.getAddress());

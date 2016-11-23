@@ -7,14 +7,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.BrowserType;
-import ru.stqa.pft.addressbook.tests.SessionHelper;
 
 import java.util.concurrent.TimeUnit;
 
 /**
  * Created by alena on 04.10.16.
  */
-public class ApplicatorManader {
+public class ApplicationManager {
     WebDriver wd;
     private AdderessHelper adderessHelper;
     private SessionHelper sessionHelper;
@@ -22,7 +21,7 @@ public class ApplicatorManader {
     private GroupHelper groupHelper;
     private String browser;
 
-    public ApplicatorManader(String browser) {
+    public ApplicationManager(String browser) {
         this.browser = browser;
     }
 

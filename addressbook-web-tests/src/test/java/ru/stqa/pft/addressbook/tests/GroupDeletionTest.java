@@ -3,7 +3,7 @@ package ru.stqa.pft.addressbook.tests;
 import org.testng.annotations.Test;
 
 
-public class GroupDelitonTest extends TestBase {
+public class GroupDeletionTest extends TestBase {
 
 
     
