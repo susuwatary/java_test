@@ -17,6 +17,7 @@ public class GroupAdderssTests {
         wd = new FirefoxDriver();
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         login("admin", "secret");
+        // comment//
     }
 
     private void login(String username, String password) {
