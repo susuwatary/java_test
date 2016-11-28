@@ -26,3 +26,5 @@ sandbox/.idea/workspace.xml
 .idea/workspace.xml
 
 addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/.DS_Store
+
+.DS_Store
