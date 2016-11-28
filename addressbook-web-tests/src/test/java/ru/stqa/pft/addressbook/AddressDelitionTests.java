@@ -14,7 +14,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.*;
 import static org.openqa.selenium.OutputType.*;
 
-public class AdsressDelitionTest {
+public class AddressDelitionTests {
     FirefoxDriver wd;
     
     @BeforeMethod
@@ -24,7 +24,7 @@ public class AdsressDelitionTest {
     }
     
     @Test
-    public void AdsressDelitionTest() {
+    public void testAdsressDelitionTest() {
         wd.get("http://localhost/addressbook/index.php");
         wd.findElement(By.name("pass")).click();
         wd.findElement(By.name("pass")).sendKeys("\\undefined");

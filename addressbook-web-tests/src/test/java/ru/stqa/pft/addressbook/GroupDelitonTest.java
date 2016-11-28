@@ -11,7 +11,7 @@ public class GroupDelitonTest extends TestBase {
 
     
     @Test
-    public void GroupDelitonTest() {
+    public void testGroupDelitonTest() {
 
         wd.findElement(By.linkText("groups")).click();
         SelectGroup();

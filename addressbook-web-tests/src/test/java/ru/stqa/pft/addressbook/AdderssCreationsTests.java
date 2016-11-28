@@ -37,7 +37,7 @@ public class AdderssCreationsTests {
     }
 
     @Test
-    public void GroupAdderssTests() {
+    public void testGroupAdderssTests() {
 
         gotoAdders();
         fillcontact(new GroupContact("Alena", "Kob", "this address", "+71111111111", "exempl@dor.com"));
