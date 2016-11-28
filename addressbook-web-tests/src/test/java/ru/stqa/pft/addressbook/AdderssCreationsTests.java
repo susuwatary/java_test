@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.*;
 
-public class GroupAdderssTests {
+public class AdderssCreationsTests {
     FirefoxDriver wd;
     
     @BeforeMethod
@@ -40,11 +40,11 @@ public class GroupAdderssTests {
     public void GroupAdderssTests() {
 
         gotoAdders();
-        fillcontact(new GroupContsct("Alena", "Kob", "this address", "+71111111111", "exempl@dor.com"));
+        fillcontact(new GroupContact("Alena", "Kob", "this address", "+71111111111", "exempl@dor.com"));
         returnToAddres();
     }
 
-    private void fillcontact(GroupContsct groupContsct) {
+    private void fillcontact(GroupContact groupContsct) {
         wd.findElement(By.name("firstname")).click();
         wd.findElement(By.name("firstname")).clear();
         wd.findElement(By.name("firstname")).sendKeys(groupContsct.getName());
