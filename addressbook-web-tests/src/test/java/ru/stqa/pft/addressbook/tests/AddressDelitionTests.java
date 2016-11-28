@@ -1,8 +1,6 @@
-package ru.stqa.pft.addressbook;
+package ru.stqa.pft.addressbook.tests;
 
 import org.testng.annotations.Test;
-
-import org.openqa.selenium.*;
 
 public class AddressDelitionTests extends TestBase {
 
@@ -10,9 +8,9 @@ public class AddressDelitionTests extends TestBase {
     
     @Test
     public void testAdsressDelitionTest() {
-        gotoAddressBook();
-        creationsAddress();
-        deliteAddress();
+        app.gotoAddressBook();
+        app.creationsAddress();
+        app.deliteAddress();
     }
 
 
