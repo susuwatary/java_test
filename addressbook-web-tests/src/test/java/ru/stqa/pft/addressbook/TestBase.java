@@ -85,4 +85,47 @@ public class TestBase {
     protected void SelectGroup() {
         wd.findElement(By.name("selected[]")).click();
     }
+
+    protected void gotoGroupPages() {
+        wd.findElement(By.linkText("groups")).click();
+    }
+
+    protected void fillcontact(GroupContact groupContsct) {
+        wd.findElement(By.name("firstname")).click();
+        wd.findElement(By.name("firstname")).clear();
+        wd.findElement(By.name("firstname")).sendKeys(groupContsct.getName());
+        wd.findElement(By.name("middlename")).click();
+        wd.findElement(By.name("lastname")).click();
+        wd.findElement(By.name("lastname")).clear();
+        wd.findElement(By.name("lastname")).sendKeys(groupContsct.getLastname());
+        wd.findElement(By.name("address")).click();
+        wd.findElement(By.name("address")).clear();
+        wd.findElement(By.name("address")).sendKeys(groupContsct.getAddress());
+        wd.findElement(By.name("home")).click();
+        wd.findElement(By.name("home")).clear();
+        wd.findElement(By.name("home")).sendKeys(groupContsct.getTel());
+        wd.findElement(By.name("email")).click();
+        wd.findElement(By.name("email")).clear();
+        wd.findElement(By.name("email")).sendKeys(groupContsct.getEmail());
+    }
+
+    protected void returnToAddres() {
+        wd.findElement(By.xpath("//div[@id='content']/form/input[21]")).click();
+    }
+
+    protected void gotoAdders() {
+        wd.findElement(By.linkText("add new")).click();
+    }
+
+    protected void deliteAddress() {
+        wd.findElement(By.xpath("//div[@id='content']/form[2]/input[2]")).click();
+    }
+
+    protected void creationsAddress() {
+        wd.findElement(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img")).click();
+    }
+
+    protected void gotoAddressBook() {
+        wd.get("http://localhost/addressbook/index.php");
+    }
 }

@@ -13,10 +13,11 @@ public class GroupDelitonTest extends TestBase {
     @Test
     public void testGroupDelitonTest() {
 
-        wd.findElement(By.linkText("groups")).click();
+        gotoGroupPages();
         SelectGroup();
         delitaSelectGroup();
-        returnGroupPaga();    }
+        returnGroupPaga();
+    }
 
 
 }
