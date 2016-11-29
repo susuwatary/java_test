@@ -10,10 +10,10 @@ public class GroupDelitonTest extends TestBase {
     @Test
     public void testGroupDelitonTest() {
 
-        app.gotoGroupPages();
-        app.SelectGroup();
-        app.delitaSelectGroup();
-        app.returnGroupPaga();
+        app.getNavigationHelper().gotoGroupPages();
+        app.getGroupHelper().SelectGroup();
+        app.getGroupHelper().delitaSelectGroup();
+        app.getGroupHelper().returnGroupPaga();
     }
 
 

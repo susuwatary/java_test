@@ -8,9 +8,9 @@ public class AddressDelitionTests extends TestBase {
     
     @Test
     public void testAdsressDelitionTest() {
-        app.gotoAddressBook();
-        app.creationsAddress();
-        app.deliteAddress();
+        app.getNavigationHelper().gotoAddressBook();
+        app.getAddressHelp().creationsAddress();
+        app.getAddressHelp().deliteAddress();
     }
 
 

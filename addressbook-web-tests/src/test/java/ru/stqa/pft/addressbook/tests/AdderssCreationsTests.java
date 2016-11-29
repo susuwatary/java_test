@@ -10,9 +10,9 @@ public class AdderssCreationsTests extends TestBase {
     @Test
     public void testGroupAdderssTests() {
 
-        app.gotoAdders();
-        app.fillcontact(new GroupContact("Alena", "Kob", "this address", "+71111111111", "exempl@dor.com"));
-        app.returnToAddres();
+        app.getNavigationHelper().gotoAdders();
+        app.getAddressHelp().fillcontact(new GroupContact("Alena", "Kob", "this address", "+71111111111", "exempl@dor.com"));
+        app.getAddressHelp().returnToAddres();
     }
 
 
