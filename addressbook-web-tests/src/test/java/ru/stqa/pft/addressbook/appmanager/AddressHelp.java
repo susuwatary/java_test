@@ -1,6 +1,7 @@
 package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.stqa.pft.addressbook.model.GroupContact;
 
@@ -10,7 +11,8 @@ import ru.stqa.pft.addressbook.model.GroupContact;
 public class AddressHelp extends HelperBase {
 
 
-    public AddressHelp(FirefoxDriver wd) {
+    public AddressHelp(WebDriver wd) {
+
         super(wd);
     }
 
